@@ -24,7 +24,7 @@ def app():
         st.session_state.start = time.time()
 
     axel_folder = 'axel_res'  
-    sd15_folder = 'aixel'  
+    sd15_folder = 'axel'  
 
     #wczytanie obrazów
     axel_images = load_images_from_folder(axel_folder)
