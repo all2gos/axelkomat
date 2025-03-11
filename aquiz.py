@@ -30,6 +30,9 @@ def app():
     axel_images = load_images_from_folder(axel_folder)
     sd15_images = load_images_from_folder(sd15_folder)
 
+
+    if "img_width" not in st.session_state:
+        st.session_state.img_width = st.select_slider("Wybierz szerokość obrazków", options=[100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300], value=300)
     #sprawdzamy, czy reset został ustawiony i inicjujemy go, jeśli nie
     if "reset" not in st.session_state:
         st.session_state.reset = False
@@ -61,8 +64,7 @@ def app():
     cols = st.columns(2)
     for i, img_path in enumerate(st.session_state.images):
         img = Image.open(img_path)
-        img_width = 130 if st.session_state.device == "mobile" else 300
-        cols[i % 2].image(img, caption=f"Obrazek {i + 1}", width=img_width)
+        cols[i % 2].image(img, caption=f"Obrazek {i + 1}", width=st.session_state.img_width)
 
     #odpowiedzi użytkownika
 
