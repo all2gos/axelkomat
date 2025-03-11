@@ -63,7 +63,7 @@ def app():
 
     for i, img_path in enumerate(st.session_state.images):
         img = Image.open(img_path)
-        col = cols[i % 2]  # Pamiętamy, aby umieścić naprzemiennie, ale sekwencyjnie
+        col = cols[i // 2]  # Pamiętamy, aby umieścić naprzemiennie, ale sekwencyjnie
         col.image(img, caption=f"Obrazek {i + 1}", width=st.session_state.img_width)
 
     #odpowiedzi użytkownika
