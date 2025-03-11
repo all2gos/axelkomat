@@ -31,8 +31,7 @@ def app():
     sd15_images = load_images_from_folder(sd15_folder)
 
 
-    if "img_width" not in st.session_state:
-        st.session_state.img_width = st.select_slider("Wybierz szerokość obrazków", options=[100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300], value=300)
+    st.session_state.img_width = st.select_slider("Wybierz szerokość obrazków", options=[100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300], value=300)
     #sprawdzamy, czy reset został ustawiony i inicjujemy go, jeśli nie
     if "reset" not in st.session_state:
         st.session_state.reset = False
