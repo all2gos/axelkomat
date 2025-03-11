@@ -59,11 +59,11 @@ def app():
     #wyświetlanie obrazków w Streamlit w układzie 2x2
     st.title("Axel czy AIxel?")
 
-    #wyświetlamy 4 obrazki w układzie 2x2
-    cols = st.columns(2)
-    for i, img_path in enumerate(st.session_state.images):
-        img = Image.open(img_path)
-        cols[i % 2].image(img, caption=f"Obrazek {i + 1}", width=st.session_state.img_width)
+    with st.container():
+        grid = st.grid(2)  # Tworzymy siatkę 2x2
+        for i, img_path in enumerate(st.session_state.images):
+            img = Image.open(img_path)
+            grid.cell().image(img, caption=f"Obrazek {i + 1}", width=st.session_state.img_width)
 
     #odpowiedzi użytkownika
 
