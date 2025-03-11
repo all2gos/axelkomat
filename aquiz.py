@@ -14,6 +14,11 @@ def load_images_from_folder(folder_path):
 
 def app():
 
+    st.set_page_config(
+    page_title="Axelkomat",  # Nazwa na pasku
+    page_icon=":cat:",  # Emoji na ikonie aplikacji
+)
+
     if "cnt" not in st.session_state:
         st.session_state.cnt = 0
 
