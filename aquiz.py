@@ -61,7 +61,8 @@ def app():
     cols = st.columns(2)
     for i, img_path in enumerate(st.session_state.images):
         img = Image.open(img_path)
-        cols[i % 2].image(img, caption=f"Obrazek {i + 1}", use_column_width=True)
+        img_width = 130 if st.session_state.device == "mobile" else 300
+        cols[i % 2].image(img, caption=f"Obrazek {i + 1}", width=img_width)
 
     #odpowiedzi użytkownika
 
