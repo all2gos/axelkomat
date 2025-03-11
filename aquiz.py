@@ -73,7 +73,7 @@ def app():
 
     #odpowiedzi użytkownika
 
-    answer = st.radio('Które zdjęcia przedstawia prawdziwego Axelka?',('Tu nie ma prawdziwego Axelka',1,2,3,4))
+    answer = st.radio('Które zdjęcie przedstawia prawdziwego Axelka?',('Tu nie ma prawdziwego Axelka',1,2,3,4))
     #przycisk do sprawdzenia wyniku
     if st.button("Sprawdź wynik"):
 
