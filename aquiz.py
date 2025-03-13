@@ -97,7 +97,7 @@ def app():
 
         st.write(f"To już koniec naszej zabawy. Twój wynik to {st.session_state.score}/{st.session_state.cnt} uzyskany w czasie {formatted_time} ")
 
-        st.write(f"PS. Jeżeli chcesz zobaczyć coś więcej to zapraszam [tu](https://colab.research.google.com/drive/1B1OxfWqtRuEtgnKEqK_7D9GBMig_cm4p?usp=sharing)")
+        st.write(f"PS. To tak naprawdę nie jest axelkomat. Axelkomat został wykorzystany do stworzenia tego quizu i można sprawdzić jego inne możliwości [tu](https://colab.research.google.com/drive/1B1OxfWqtRuEtgnKEqK_7D9GBMig_cm4p?usp=sharing)")
 
 if __name__ == "__main__":
     app()
