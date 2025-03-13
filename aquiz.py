@@ -72,7 +72,7 @@ def app():
         col.image(img, caption=f"Obrazek {i + 1}", width=st.session_state.img_width)
 
     #odpowiedzi użytkownika
-    st.write('Oglądasz teraz 4 zdjęcia Axela: niektóre z nich (albo wszystkie) zostały wygenerowane przez AI (AIxel), inne (czy raczej maksymalnie jedno) jest prawdziwe. Twoim zadaniem jest poprawna weryfikacja Axela i AIxela")
+    st.write("Oglądasz teraz 4 zdjęcia Axela: niektóre z nich (albo wszystkie) zostały wygenerowane przez AI (AIxel), inne (czy raczej maksymalnie jedno) jest prawdziwe. Twoim zadaniem jest poprawna weryfikacja Axela i AIxela")
     answer = st.radio('Które zdjęcie przedstawia prawdziwego Axelka?',('Tu nie ma prawdziwego Axelka',1,2,3,4))
     #przycisk do sprawdzenia wyniku
     if st.button("Sprawdź wynik"):
